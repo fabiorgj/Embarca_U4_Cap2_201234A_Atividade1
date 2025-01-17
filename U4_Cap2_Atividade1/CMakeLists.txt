@@ -28,35 +28,35 @@ set(PICO_BOARD pico_w CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(Embarca_U4_Cap2_201234A_Atividade1 C CXX ASM)
+project(U4_Cap2_Atividade1 C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(Embarca_U4_Cap2_201234A_Atividade1 Embarca_U4_Cap2_201234A_Atividade1.c )
+add_executable(U4_Cap2_Atividade1 U4_Cap2_Atividade1.c )
 
-pico_set_program_name(Embarca_U4_Cap2_201234A_Atividade1 "Embarca_U4_Cap2_201234A_Atividade1")
-pico_set_program_version(Embarca_U4_Cap2_201234A_Atividade1 "0.1")
+pico_set_program_name(U4_Cap2_Atividade1 "U4_Cap2_Atividade1")
+pico_set_program_version(U4_Cap2_Atividade1 "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(Embarca_U4_Cap2_201234A_Atividade1 1)
-pico_enable_stdio_usb(Embarca_U4_Cap2_201234A_Atividade1 1)
+pico_enable_stdio_uart(U4_Cap2_Atividade1 1)
+pico_enable_stdio_usb(U4_Cap2_Atividade1 1)
 
 # Add the standard library to the build
-target_link_libraries(Embarca_U4_Cap2_201234A_Atividade1
+target_link_libraries(U4_Cap2_Atividade1
         pico_stdlib)
 
 # Add the standard include files to the build
-target_include_directories(Embarca_U4_Cap2_201234A_Atividade1 PRIVATE
+target_include_directories(U4_Cap2_Atividade1 PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}
 )
 
 # Add any user requested libraries
-target_link_libraries(Embarca_U4_Cap2_201234A_Atividade1 
+target_link_libraries(U4_Cap2_Atividade1 
         
         )
 
-pico_add_extra_outputs(Embarca_U4_Cap2_201234A_Atividade1)
+pico_add_extra_outputs(U4_Cap2_Atividade1)
 
