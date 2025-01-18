@@ -49,7 +49,6 @@ target_link_libraries(U4_Cap2_Atividade1
         pico_stdlib       # Biblioteca padrão
         hardware_pwm      # Controle de PWM
         hardware_clocks   # Controle de clocks
-        stdio
         hardware_timer
         )
 
