@@ -161,7 +161,9 @@ return 0;
 
 // Implementação das funções para cada tecla
 //Liga os leds respectivamente
-void func_1(void) {}
+void func_1(void) { // liga led verde
+gpio_put(led_pin_green, 1);
+ }
 void func_2(void) {}
 void func_3(void) {}
 
