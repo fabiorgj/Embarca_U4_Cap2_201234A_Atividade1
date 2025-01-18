@@ -164,7 +164,9 @@ return 0;
 void func_1(void) { // liga led verde
 gpio_put(led_pin_green, 1);
  }
-void func_2(void) {}
+void func_2(void) { // liga led azul
+gpio_put(led_pin_blue, 1);
+}
 void func_3(void) {}
 
 
