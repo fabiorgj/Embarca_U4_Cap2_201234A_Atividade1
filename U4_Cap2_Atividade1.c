@@ -167,7 +167,9 @@ gpio_put(led_pin_green, 1);
 void func_2(void) { // liga led azul
 gpio_put(led_pin_blue, 1);
 }
-void func_3(void) {}
+void func_3(void) { // liga led red
+gpio_put(led_pin_red, 1);
+}
 
 
 //Desliga os leds respectivamente
