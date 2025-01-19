@@ -196,7 +196,13 @@ void func_8(void) {
  }
 
 //Liga somente os leds azul e verde por um tempo determinado
-void func_7(void) {}
+void func_7(void) {
+    gpio_put(led_pin_blue, 1);
+    gpio_put(led_pin_green, 1);
+    sleep_ms(3000);
+    gpio_put(led_pin_blue, 0);
+    gpio_put(led_pin_green, 0);
+}
 
 //Liga somente os leds vermelho e azul por um tempo determinado
 void func_9(void) {}
