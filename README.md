@@ -14,14 +14,14 @@ Luis Guilherme Coelho Saturnino
 Paolla Giselle Ribeiro
 
 
-# # DESCRIÇÃO
+## DESCRIÇÃO
 
 Este programa foi desenvolvido para a Raspberry Pi Pico e utiliza um teclado matricial 4x4 para controlar LEDs RGB e um buzzer através de uma RaspBerry Pi Pico W. Cada tecla do teclado aciona uma função específica, como ligar/desligar LEDs ou ativar o buzzer.
 
 O programa é composto por funções para inicializar e operar os LEDs, o buzzer, e o teclado, além de um loop principal que monitora a entrada do teclado e executa as funções correspondentes.
 
 
-# # FUNCIONALIDADES
+## FUNCIONALIDADES
 
 - Acionamento e desacionamento de LEDs (verde, azul e vermelho).
 - Ativação de combinações específicas dos LEDs.
@@ -29,7 +29,7 @@ O programa é composto por funções para inicializar e operar os LEDs, o buzzer
 - Leitura de teclas do teclado matricial 4x4.
 
 
-# # INSTRUÇÕES PARA USO
+## INSTRUÇÕES PARA USO
 
 Hardware Necessário:
 
@@ -51,7 +51,7 @@ Como Usar:
 - Teclas 'A', 'B', 'C', '*', '0', '#', 'D': Acionam o buzzer.
 
 
-# # EXPLICAÇÃO DAS FUNÇÕES
+## EXPLICAÇÃO DAS FUNÇÕES
 - inicializa_teclado(): Configura os pinos GPIO para operar como entradas ou saídas do teclado matricial.
 - inicializa_LEDs(): Configura os pinos dos LEDs como saídas e garante que estão inicialmente apagados.
 - init_buzzer(uint pin): Configura o PWM no pino do buzzer para gerar um sinal de 2 kHz.
@@ -62,7 +62,7 @@ Como Usar:
 - aciona_buzzer(): Ativa o buzzer com um duty cycle de 50% por 1 segundo.
 
 
-# # LISTA DE COMPONENTES E CONEXÕES
+## LISTA DE COMPONENTES E CONEXÕES
 
 GP1: Conectado ao C4 do Keypad.
 
@@ -94,4 +94,4 @@ GND.8: Conectado ao terminal negativo (pino 1) do buzzer.
 
 # # DIAGRAMA COM COMPONENTES
 
-![Conexões do Circuito]F:\Embarcatech\U4\Tarefas\Tarefas_aula_sincrona_14_01\Embarca_U4_Cap2_201234A_Atividade1\U4_Cap2_Atividade1\Diagrama_componentes
+![Conexões do Circuito](https://github.com/fabiorgj/Embarca_U4_Cap2_201234A_Atividade1/blob/main/Diagrama_componentes.png)
