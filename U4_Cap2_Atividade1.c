@@ -173,9 +173,16 @@ gpio_put(led_pin_red, 1);
 
 
 //Desliga os leds respectivamente
-void func_4(void) {}
-void func_5(void) {}
-void func_6(void) {}
+void func_4(void) {
+    gpio_put(led_pin_green,0);
+}
+void func_5(void) {
+    gpio_put(led_pin_blue,0);
+}
+
+void func_6(void) {
+    gpio_put(led_pin_red,0);
+}
 
 //Liga todos os leds por 3 segundos
 void func_8(void) { 
