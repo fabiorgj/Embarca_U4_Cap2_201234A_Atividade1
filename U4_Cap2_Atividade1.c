@@ -197,9 +197,14 @@ void func_8(void) {
 
 //Liga somente os leds azul e verde por um tempo determinado
 void func_7(void) {}
-
 //Liga somente os leds vermelho e azul por um tempo determinado
-void func_9(void) {}
+void func_9(void) {
+    gpio_put(led_pin_red,1);
+    gpio_put(led_pin_blue,1);
+    sleep_ms(3000);
+    gpio_put(led_pin_red,0);
+    gpio_put(led_pin_blue,0);
+}
 
 //Aciona o buzzer por 1 segundo
 void aciona_buzzer(void) {
