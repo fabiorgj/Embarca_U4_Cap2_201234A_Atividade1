@@ -1,6 +1,6 @@
 Embarcatech - U4 - Microcontroladores
 
-Atividade 1 - Aula sícrona de 14/01/2025
+Atividade 1 - Controle de pinos GPIO com o emprego de um teclado matricial. - Aula sícrona de 14/01/2025
 
 Grupo 1, Subgrupo 8
 
@@ -17,6 +17,10 @@ Larissa Batista dos Santos
 Luis Guilherme Coelho Saturnino
 
 Paolla Giselle Ribeiro
+
+## Vídeo
+
+![Atividade 1](https://drive.google.com/file/d/1nZ3jRo0h9eBSnZzgY2baGMo_T2CGduFR/view?usp=sharing)
 
 
 ## DESCRIÇÃO
