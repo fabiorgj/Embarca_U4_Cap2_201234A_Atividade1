@@ -132,7 +132,7 @@ int main(){
         last_tecla = tecla;
         escolha_switch = tecla;
     }else{
-      sleep_ms(200);
+      sleep_ms(50);
       escolha_switch = 'N';
     }
     //se for 8,chama a função que liga todos os LEDs
@@ -218,4 +218,3 @@ void aciona_buzzer(void) {
     // Desativar o PWM (duty cycle 0)
     pwm_set_gpio_level(BUZZER_PIN, 0);
 }
-

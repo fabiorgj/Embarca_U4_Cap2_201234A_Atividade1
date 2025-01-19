@@ -1,3 +1,31 @@
+# INSTRUÇÕES PARA USO
+Instruções de Uso para o Circuito com Raspberry Pi Pico W e Teclado Matricial
+Este circuito permite controlar LEDs e um buzzer utilizando um teclado matricial de 4x4. As funções associadas a cada tecla estão descritas abaixo. 
+
+1. Operações com o Teclado
+O teclado possui diferentes funcionalidades para controlar LEDs e o buzzer. Pressione as teclas correspondentes para executar a ação desejada:
+Teclas para ligar os LEDs Individualmente
+- Tecla “1”: Liga o LED verde.
+- Tecla “2”: Liga o LED azul.
+- Tecla “3”: Liga o LED vermelho.
+
+Teclas para desligar os LEDs Individualmente
+- Tecla “4”: Desliga o LED verde.
+- Tecla “5”: Desliga o LED azul.
+- Tecla “6”: Desliga o LED vermelho.
+
+Teclas para Ligar Combinações de LEDs Temporariamente
+- Tecla “8”: Liga todos os LEDs (vermelho, azul e verde) por 3 segundos.
+- Tecla “7”: Liga apenas os LEDs azul e verde por 3 segundos.
+- Tecla “9”: Liga apenas os LEDs vermelho e azul por 3 segundos.
+
+Teclas para acionar o Buzzer
+- Teclas “*”, “0”, “#”, “A”, “B”, “C”, “D”: Acionam o buzzer por 1 segundo. Durante este tempo, será emitido um som.
+
+
+# DESCRIÇÃO DAS FUNÇÕES E CONEXÕES 
+
+
 # Função 'inicializa_teclado'
 
 Esta função inicializa os pinos do teclado matricial. Ela configura as linhas como saídas, mantendo-as em nível alto, e as colunas como entradas, utilizando resistores pull-up. Esse processo é necessário para que o teclado matricial funcione corretamente com o Raspberry Pi Pico, permitindo a leitura das teclas pressionadas.
