@@ -7,10 +7,15 @@ Grupo 1, Subgrupo 8
 Integrantes:
 
 Fábio Rocha Gomes Jardim
+
 Igor de Eça Almeida
+
 Kauan Lopes de Jesus
+
 Larissa Batista dos Santos
+
 Luis Guilherme Coelho Saturnino
+
 Paolla Giselle Ribeiro
 
 
@@ -92,6 +97,6 @@ GND.4: Compartilhado como o terra para os cátodos dos LEDs.
 
 GND.8: Conectado ao terminal negativo (pino 1) do buzzer.
 
-# # DIAGRAMA COM COMPONENTES
+## DIAGRAMA COM COMPONENTES
 
 ![Conexões do Circuito](https://github.com/fabiorgj/Embarca_U4_Cap2_201234A_Atividade1/blob/main/Diagrama_componentes.png)
