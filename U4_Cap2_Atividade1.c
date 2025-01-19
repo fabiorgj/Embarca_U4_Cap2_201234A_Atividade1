@@ -162,30 +162,36 @@ return 0;
 // Implementação das funções para cada tecla
 //Liga os leds respectivamente
 void func_1(void) { // liga led verde
+printf("Ligando o led verde\n");
 gpio_put(led_pin_green, 1);
  }
 void func_2(void) { // liga led azul
+printf("Ligando o led azul\n");
 gpio_put(led_pin_blue, 1);
 }
 void func_3(void) { // liga led red
+printf("Ligando o led vermelho\n");
 gpio_put(led_pin_red, 1);
 }
 
-
 //Desliga os leds respectivamente
 void func_4(void) {
+    printf("Desligando o led verde\n");
     gpio_put(led_pin_green,0);
 }
 void func_5(void) {
+    printf("Desligando o led azul\n");
     gpio_put(led_pin_blue,0);
 }
 
 void func_6(void) {
+    printf("Desligando o led vermelho\n");
     gpio_put(led_pin_red,0);
 }
 
 //Liga todos os leds por 3 segundos
 void func_8(void) { 
+    printf("Ligando todos os leds por 3 segundos\n");
     gpio_put(led_pin_red, 1);
     gpio_put(led_pin_blue, 1);
     gpio_put(led_pin_green, 1);
@@ -197,6 +203,7 @@ void func_8(void) {
 
 //Liga somente os leds azul e verde por um tempo determinado
 void func_7(void) {
+    printf("Ligando azul e verde por 3 segundos\n");
     gpio_put(led_pin_blue, 1);
     gpio_put(led_pin_green, 1);
     sleep_ms(3000);
@@ -206,6 +213,7 @@ void func_7(void) {
 
 //Liga somente os leds vermelho e azul por um tempo determinado
 void func_9(void) {
+    printf("Ligando vermelho e azul por 3 segundos\n");
     gpio_put(led_pin_red,1);
     gpio_put(led_pin_blue,1);
     sleep_ms(3000);
