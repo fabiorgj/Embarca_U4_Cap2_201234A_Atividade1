@@ -20,7 +20,7 @@ Paolla Giselle Ribeiro
 
 ## Vídeo
 
-![Atividade 1](https://drive.google.com/file/d/1nZ3jRo0h9eBSnZzgY2baGMo_T2CGduFR/view?usp=sharing)
+https://drive.google.com/file/d/1nZ3jRo0h9eBSnZzgY2baGMo_T2CGduFR/view?usp=sharing
 
 
 ## DESCRIÇÃO
