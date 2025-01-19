@@ -1,51 +1,68 @@
-# INSTRUÇÕES PARA USO
-Instruções de Uso para o Circuito com Raspberry Pi Pico W e Teclado Matricial
-Este circuito permite controlar LEDs e um buzzer utilizando um teclado matricial de 4x4. As funções associadas a cada tecla estão descritas abaixo. 
+Embarcatech - U4 - Microcontroladores
 
-1. Operações com o Teclado
-O teclado possui diferentes funcionalidades para controlar LEDs e o buzzer. Pressione as teclas correspondentes para executar a ação desejada:
-Teclas para ligar os LEDs Individualmente
-- Tecla “1”: Liga o LED verde.
-- Tecla “2”: Liga o LED azul.
-- Tecla “3”: Liga o LED vermelho.
+Atividade 1 - Aula sícrona de 14/01/2025
 
-Teclas para desligar os LEDs Individualmente
-- Tecla “4”: Desliga o LED verde.
-- Tecla “5”: Desliga o LED azul.
-- Tecla “6”: Desliga o LED vermelho.
+Grupo 1, Subgrupo 8
 
-Teclas para Ligar Combinações de LEDs Temporariamente
-- Tecla “8”: Liga todos os LEDs (vermelho, azul e verde) por 3 segundos.
-- Tecla “7”: Liga apenas os LEDs azul e verde por 3 segundos.
-- Tecla “9”: Liga apenas os LEDs vermelho e azul por 3 segundos.
+Integrantes:
 
-Teclas para acionar o Buzzer
-- Teclas “*”, “0”, “#”, “A”, “B”, “C”, “D”: Acionam o buzzer por 1 segundo. Durante este tempo, será emitido um som.
+Fábio Rocha Gomes Jardim
+Igor de Eça Almeida
+Kauan Lopes de Jesus
+Larissa Batista dos Santos
+Luis Guilherme Coelho Saturnino
+Paolla Giselle Ribeiro
 
 
-# DESCRIÇÃO DAS FUNÇÕES E CONEXÕES 
+# # DESCRIÇÃO
+
+Este programa foi desenvolvido para a Raspberry Pi Pico e utiliza um teclado matricial 4x4 para controlar LEDs RGB e um buzzer através de uma RaspBerry Pi Pico W. Cada tecla do teclado aciona uma função específica, como ligar/desligar LEDs ou ativar o buzzer.
+
+O programa é composto por funções para inicializar e operar os LEDs, o buzzer, e o teclado, além de um loop principal que monitora a entrada do teclado e executa as funções correspondentes.
 
 
-# Função 'inicializa_teclado'
+# # FUNCIONALIDADES
 
-Esta função inicializa os pinos do teclado matricial. Ela configura as linhas como saídas, mantendo-as em nível alto, e as colunas como entradas, utilizando resistores pull-up. Esse processo é necessário para que o teclado matricial funcione corretamente com o Raspberry Pi Pico, permitindo a leitura das teclas pressionadas.
-
-# Função 'ler_tecla'
-
-A função ler_tecla() realiza a leitura do teclado matricial. Ela percorre as linhas e colunas do teclado para detectar qual tecla foi pressionada. Quando uma tecla é pressionada, a função retorna o caractere correspondente à tecla pressionada.
-
-
-# Função 'inicializa_LEDs'
-
-Esta função inicializa os LEDs conectados ao Raspberry Pi Pico, configurando os pinos de controle dos LEDs (vermelho, azul e verde) como saídas. Inicialmente, os LEDs serão desligados.
+- Acionamento e desacionamento de LEDs (verde, azul e vermelho).
+- Ativação de combinações específicas dos LEDs.
+- Ativação do buzzer.
+- Leitura de teclas do teclado matricial 4x4.
 
 
-# Função 'liga_todos_LEDs'
+# # INSTRUÇÕES PARA USO
 
-A função liga_todos_LEDs() acende todos os LEDs (vermelho, azul e verde) por 3 segundos e, em seguida, os desliga. Essa função é chamada na 'main' quando a tecla '8' do teclado é pressionada.
+Hardware Necessário:
+
+- Raspberry Pi Pico.
+- Teclado matricial 4x4 conectado aos pinos GP1–GP8.
+- Três LEDs (vermelho, azul e verde) conectados aos pinos GP18, GP19 e GP20, com resistores apropriados.
+- Buzzer conectado ao pino GP28.
+
+Como Usar:
+
+- Conecte os componentes conforme especificado no diagrama ao final.
+- Compile e carregue o código no Raspberry Pi Pico utilizando o SDK do Pico (CMake).
+- Pressione as teclas no teclado para controlar os LEDs e o buzzer:
+- Teclas '1', '2', '3': Ligam os LEDs verde, azul e vermelho, respectivamente.
+- Teclas '4', '5', '6': Desligam os LEDs verde, azul e vermelho, respectivamente.
+- Tecla '7': Liga os LEDs azul e verde por 3 segundos.
+- Tecla '8': Liga todos os LEDs por 3 segundos.
+- Tecla '9': Liga os LEDs vermelho e azul por 3 segundos.
+- Teclas 'A', 'B', 'C', '*', '0', '#', 'D': Acionam o buzzer.
 
 
-# Lista de Pinos e Componentes
+# # EXPLICAÇÃO DAS FUNÇÕES
+- inicializa_teclado(): Configura os pinos GPIO para operar como entradas ou saídas do teclado matricial.
+- inicializa_LEDs(): Configura os pinos dos LEDs como saídas e garante que estão inicialmente apagados.
+- init_buzzer(uint pin): Configura o PWM no pino do buzzer para gerar um sinal de 2 kHz.
+- ler_tecla(): Detecta e retorna a tecla pressionada. Se nenhuma tecla for pressionada, retorna \0.
+- func_1() a func_6(): Ligam ou desligam os LEDs RGB individualmente.
+- func_7() e func_9(): Ativam combinações específicas de LEDs por 3 segundos.
+- func_8(): Liga todos os LEDs por 3 segundos.
+- aciona_buzzer(): Ativa o buzzer com um duty cycle de 50% por 1 segundo.
+
+
+# # LISTA DE COMPONENTES E CONEXÕES
 
 GP1: Conectado ao C4 do Keypad.
 
@@ -74,3 +91,7 @@ GP28: Conectado ao terminal positivo (pino 2) do buzzer.
 GND.4: Compartilhado como o terra para os cátodos dos LEDs.
 
 GND.8: Conectado ao terminal negativo (pino 1) do buzzer.
+
+# # DIAGRAMA COM COMPONENTES
+
+![Conexões do Circuito]F:\Embarcatech\U4\Tarefas\Tarefas_aula_sincrona_14_01\Embarca_U4_Cap2_201234A_Atividade1\U4_Cap2_Atividade1\Diagrama_componentes
