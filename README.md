@@ -38,6 +38,11 @@ O programa é composto por funções para inicializar e operar os LEDs, o buzzer
 - Leitura de teclas do teclado matricial 4x4.
 
 
+## TESTES NO DESENVOLVIMENTO
+
+Como maneira de testar o código foi acrescentado printf em cada função correspondetes às teclas.
+
+
 ## INSTRUÇÕES PARA USO
 
 Hardware Necessário:
@@ -69,6 +74,7 @@ Como Usar:
 - func_7() e func_9(): Ativam combinações específicas de LEDs por 3 segundos.
 - func_8(): Liga todos os LEDs por 3 segundos.
 - aciona_buzzer(): Ativa o buzzer com um duty cycle de 50% por 1 segundo.
+
 
 
 ## LISTA DE COMPONENTES E CONEXÕES
